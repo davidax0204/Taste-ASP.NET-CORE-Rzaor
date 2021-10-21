@@ -22,8 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Pages\Admin\User\" />
-    <Folder Include="Pages\Cusotmer\Home\" />
-    <Folder Include="Pages\Cusotmer\Cart\" />
+    <Folder Include="Pages\Customer\Cart\" />
     <Folder Include="wwwroot\images\menuItems\" />
   </ItemGroup>
 
