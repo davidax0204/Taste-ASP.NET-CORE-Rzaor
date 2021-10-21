@@ -25,7 +25,6 @@ namespace Taste.DataAccess.Data.Repository.IRepository
             });
         }
 
-
         public void Update(FoodType objectToBeUpdated)
         {
             var categoryFromDb = _db.FoodType.FirstOrDefault(s => s.Id == objectToBeUpdated.Id);
@@ -33,9 +32,5 @@ namespace Taste.DataAccess.Data.Repository.IRepository
             _db.SaveChanges();
         }
 
-        IEnumerable<SelectListItem> IFoodTypeRepository.GetFoodTypeListForDropDown()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
