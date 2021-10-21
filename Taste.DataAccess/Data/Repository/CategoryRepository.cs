@@ -17,7 +17,7 @@ namespace Taste.DataAccess.Data.Repository
             _db = db;
         }
 
-        public IEnumerable<SelectListItem> GetCatergoryListForDropDown()
+        public IEnumerable<SelectListItem> GetCategoryListForDropDown()
         {
             return _db.Category.Select(i => new SelectListItem()
             {
@@ -34,6 +34,7 @@ namespace Taste.DataAccess.Data.Repository
             objFromDb.DisplayOrder = category.DisplayOrder;
 
             _db.SaveChanges();
+
         }
     }
 }

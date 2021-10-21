@@ -6,7 +6,8 @@ namespace Taste.DataAccess.Data.Repository.IRepository
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository Category { get; set; }
+        ICategoryRepository Category { get; }
+        IFoodTypeRepository FoodType { get; }
         void Save();
     }
 }

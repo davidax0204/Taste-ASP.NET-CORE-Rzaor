@@ -6,10 +6,10 @@ using Taste.Models;
 
 namespace Taste.DataAccess.Data.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface IFoodTypeRepository : IRepository<FoodType>
     {
-        IEnumerable<SelectListItem> GetCategoryListForDropDown();
+        IEnumerable<SelectListItem> GetFoodTypeListForDropDown();
 
-        void Update(Category category);
+        void Update(FoodType foodType);
     }
 }

@@ -5,18 +5,20 @@ using Taste.DataAccess.Data.Repository.IRepository;
 
 namespace Taste.DataAccess.Data.Repository
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
-            Catergory = new CategoryRepository(_db);
+            Category = new CategoryRepository(_db);
+            FoodType = new FoodTypeRepository(_db);
         }
 
-        public ICategoryRepository Catergory { get; private set; }
-        public ICategoryRepository Category { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //public ICategoryRepository Catergory { get; private set; }
+        public ICategoryRepository Category { get; private set; }
+        public IFoodTypeRepository FoodType { get; private set; }
 
         public void Dispose()
         {
